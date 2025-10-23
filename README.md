@@ -100,7 +100,7 @@ local-business-directory/
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/NoungaJoseph/Local-Business-Directory-Platform.git
 cd local-business-directory
 ```
 
