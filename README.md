@@ -138,17 +138,11 @@ Open your browser and go to `http://localhost:5173`
 
 ## 🔑 Environment Variables
 
-⚠️ **SECURITY NOTICE - October 23, 2025**
-If you've cloned this repository before October 23, 2025, please note that there was a security incident where database credentials were accidentally committed. If you're using this code:
-1. Do NOT use any previously committed credentials
-2. Always use your own MongoDB connection string
-3. Keep your credentials in .env files and never commit them
-
 ### Backend (.env)
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database>
+MONGODB_URI=mongodb://localhost:27017/business-directory
 JWT_SECRET=your_secret_key_here
 CLIENT_URL=http://localhost:5173
 ```
