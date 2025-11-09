@@ -13,7 +13,9 @@ app.use(cors({
     'https://local-business-directory-platform.vercel.app',
     'http://localhost:5173' // Keep local development working
   ],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

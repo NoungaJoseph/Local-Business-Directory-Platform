@@ -26,29 +26,29 @@ api.interceptors.request.use(
 
 // Auth API
 export const authAPI = {
-  register: (data) => api.post('/auth/register', data),
-  login: (data) => api.post('/auth/login', data),
-  getMe: () => api.get('/auth/me')
+  register: (data) => api.post('/api/auth/register', data),
+  login: (data) => api.post('/api/auth/login', data),
+  getMe: () => api.get('/api/auth/me')
 };
 
 // Business API
 export const businessAPI = {
-  getAll: (params) => api.get('/business', { params }),
-  getById: (id) => api.get(`/business/${id}`),
-  create: (data) => api.post('/business', data),
-  update: (id, data) => api.put(`/business/${id}`, data),
-  delete: (id) => api.delete(`/business/${id}`),
-  getMyListings: () => api.get('/business/my/listings')
+  getAll: (params) => api.get('/api/business', { params }),
+  getById: (id) => api.get(`/api/business/${id}`),
+  create: (data) => api.post('/api/business', data),
+  update: (id, data) => api.put(`/api/business/${id}`, data),
+  delete: (id) => api.delete(`/api/business/${id}`),
+  getMyListings: () => api.get('/api/business/my/listings')
 };
 
 // Review API
 export const reviewAPI = {
-  getByBusiness: (businessId, params) => api.get(`/review/business/${businessId}`, { params }),
-  create: (data) => api.post('/review', data),
-  update: (id, data) => api.put(`/review/${id}`, data),
-  delete: (id) => api.delete(`/review/${id}`),
-  addResponse: (id, data) => api.post(`/review/${id}/response`, data),
-  markHelpful: (id) => api.post(`/review/${id}/helpful`)
+  getByBusiness: (businessId, params) => api.get(`/api/review/business/${businessId}`, { params }),
+  create: (data) => api.post('/api/review', data),
+  update: (id, data) => api.put(`/api/review/${id}`, data),
+  delete: (id) => api.delete(`/api/review/${id}`),
+  addResponse: (id, data) => api.post(`/api/review/${id}/response`, data),
+  markHelpful: (id) => api.post(`/api/review/${id}/helpful`)
 };
 
 export default api;
